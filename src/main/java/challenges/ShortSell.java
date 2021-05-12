@@ -15,13 +15,15 @@ package challenges;
  * be made from a short sell here.
  */
 public class ShortSell {
-
     public static void main(String[] args) {
         System.out.println(shortSell(new int[] { 3, 4, 5, 3, 2 }));
         System.out.println(shortSell(new int[] { 3, 4, 5, 6, 7 }));
-
+        System.out.println();
         System.out.println(shortSell2(new int[] { 3, 4, 5, 3, 2 }));
         System.out.println(shortSell2(new int[] { 3, 4, 5, 6, 7 }));
+        System.out.println();
+        System.out.println(f(new int[] { 3, 4, 5, 3, 2 }));
+        System.out.println(f(new int[] { 3, 4, 5, 6, 7 }));
     }
 
     /**
@@ -54,6 +56,22 @@ public class ShortSell {
             }
         }
         return maxProfit;
+    }
+
+    /**
+     * Obfuscated brute force.
+     */
+    static int f(int[] p) {
+        int x = 0;
+        for (int i = 0; i < p.length - 1; ++i) {
+            for (int j = i + 1; j < p.length; ++j) {
+                int d = p[i] - p[j];
+                if (d > x) {
+                    x = d;
+                }
+            }
+        }
+        return x;
     }
 
 }
