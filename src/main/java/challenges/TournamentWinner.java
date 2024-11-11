@@ -1,3 +1,5 @@
+package challenges;
+
 import java.util.*;
 
 public class TournamentWinner {
