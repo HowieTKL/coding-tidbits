@@ -1,4 +1,4 @@
-package challenges;
+package org.howietkl.challenges;
 
 public class PalindromeDetector {
 
