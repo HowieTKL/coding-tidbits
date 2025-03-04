@@ -1,20 +1,21 @@
 plugins {
-    `java-library`
+  java
 }
 
 repositories {
-    mavenCentral()
+  mavenCentral()
 }
 
 dependencies {
-    implementation("org.slf4j:slf4j-api:2.0.16")
-    implementation("org.slf4j:slf4j-simple:2.0.16")
+  implementation("org.slf4j:slf4j-api:2.0.17")
+  implementation("org.slf4j:slf4j-simple:2.0.17")
 
-    testImplementation("org.junit.jupiter:junit-jupiter:5.9.2")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-    testImplementation("org.mockito:mockito-core:3.5.9")
+  testImplementation(platform("org.junit:junit-bom:5.12.1"))
+  testImplementation("org.junit.jupiter:junit-jupiter")
+  testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+  testImplementation("org.mockito:mockito-core:5.16.1")
 }
 
 tasks.test {
-    useJUnitPlatform()
+  useJUnitPlatform()
 }

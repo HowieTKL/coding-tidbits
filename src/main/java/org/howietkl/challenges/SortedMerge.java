@@ -1,4 +1,4 @@
-package challenges;
+package org.howietkl.challenges;
 
 import java.lang.reflect.Array;
 

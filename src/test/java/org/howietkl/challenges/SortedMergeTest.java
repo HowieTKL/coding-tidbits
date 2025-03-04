@@ -1,5 +1,6 @@
-package challenges;
+package org.howietkl.challenges;
 
+import org.howietkl.challenges.SortedMerge;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
